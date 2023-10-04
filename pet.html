@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pet</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(234,174,0);
+            height: 120px;
+            padding: 0px;
+        }
+        .encab{
+            display: flex;
+            justify-content: center;
+            gap: 0 40px;
+        }
+        .items{
+            
+            border: 0 solid;
+            color: white;
+            font-size: 22px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+
+            
+        }
+        .lis-1, .lis-2, .lis-3, .lis-4{
+            list-style-type: none;
+            
+        }
+        .busqueda{
+            border: 0 solid;
+            padding: 3px 0 0 0;
+            
+            
+        }
+        input{
+            background-color: rgb(255,197,0);
+            border: 1px solid rgb(255,197,0);
+            box-shadow: 1px 2px 3px black;
+            
+            
+        }
+        ::placeholder{
+            color: white;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px;
+        }
+
+        .boton0{
+            position: relative;
+            top: 10px;
+            right: 5px;
+            border: 1px solid rgb(0,192,203);
+            box-shadow: 1px 2px 3px black;
+            
+        }
+        .lupa{
+            margin: 0 5px 0 5px;
+        }
+        .contenido1{
+            display: flex;
+            justify-content: center;
+            border: 0 solid;
+            padding: 100px;
+            background-color: rgb(255,197,0);
+            color: white;
+
+        }
+        .p1{
+            padding: 0 100px 0 100px;
+        }
+        .tl1{
+            border: 0 solid;
+            font-size: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 480px;
+        }
+        .parr1{
+            border: 0 solid;
+            font-size: 23px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 480px;
+        }
+
+        .bt{
+            border: 2px solid rgb(0,192,203);
+            padding: 12px 24px 12px 24px;
+            background-color: rgb(0,192,203);
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 0 15px 0 15px;
+        }
+        .bt2{
+            border: 2px solid white;
+            padding: 12px 24px 12px 24px;
+            background-color: rgb(255,197,0);
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 0 15px 0 15px;
+        }
+        .contenido2{
+            display: flex;
+            justify-content: center;
+            padding: 100px;
+            color: rgb(44,46,66);
+        }
+        .p2{
+            padding: 0 60px 0 60px;
+        }
+        .tl2{
+            border: 0 solid;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 350px;
+        }
+        .parr2{
+            border: 0 solid;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 450px;
+        }
+        .bt3{
+            border: 2px solid white;
+            padding: 12px 24px 12px 24px;
+            background-color: rgb(255,197,0);
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 0 15px 0 0;
+        }
+
+        .vet-dog{  
+            position: relative;
+            z-index: -1;
+        }
+        .contenido3{
+            background-color: rgb(234,174,0);
+            padding: 50px 50px 50px 50px;
+
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .veterinario-1{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .vd1, .vd2, .vd3{
+            padding: 0 5px 0 5px;
+            border: 0 solid;
+            text-align: center;
+        }
+        .tl3, .tl4, .tl5, .p3, .p4, .p5{
+            width: 250px;
+            text-align: center;
+        }
+        .contenido4{
+            display: flex;
+            padding: 100px;
+            color: rgb(44,46,66);
+            justify-content: center;
+        }
+        .vet-dog4{
+            position: relative;
+            z-index: -1;
+        }
+        .tl6{
+            border: 0 solid;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 350px;
+            text-align: right;
+            padding-left: 130px;
+        }
+        .p6{
+            border: 0 solid;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            text-align: right;
+            padding-left: 80px;
+        }
+        .bt4{
+            border: 2px solid white;
+            padding: 12px 24px 12px 24px;
+            background-color: rgb(255,197,0);
+            color: white;
+            font-size: 15px;
+            border-radius: 5px;
+            margin: 0 15px 0 350px;  
+            
+        }
+        .contenido5{
+            background-color: rgb(234,174,0);
+            padding: 50px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .dogs{
+            display: flex;
+            justify-content: center;
+        }
+        .dog2, .dog3, .dog4{
+            border: 0 solid;
+            padding: 20px 15px 0 15px;
+            text-align: center;
+        }
+        .bt5, .bt6, .bt7{
+            border: 0 solid white;
+            padding: 12px 24px 12px 24px;
+            background-color: rgb(0,192,203);
+            color: white;
+            font-size: 15px;
+            border-radius: 20px;
+            margin: 0 15px 0 0px;  
+        }
+        .contenido6{
+            padding: 50px;
+            
+            color: rgb(44,46,66);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .nurses{
+            display: flex;
+            justify-content: center;
+        }
+        .ns1, .ns2, .ns3{
+            text-align: center;
+            padding: 12px 24px 0px 24px;
+        }
+        .list1, .list2, .list3{
+            
+            border: 0 solid;
+            
+            
+        }
+        
+        .redes1, .redes2, .redes3{
+            list-style-type: none;
+            display: flex;
+            padding-left: 20px;
+            margin: 0;
+            align-items: center;
+
+        }
+        .contenido7{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+        }
+        .vet-5{
+            position: absolute;
+            width: 100%;
+            z-index: 0;
+            
+            
+            
+        }
+        .elements{
+            position: relative;
+            z-index: 1;
+            justify-content: center;
+            display: flex;
+            padding: 96px;
+            background-color: rgba(255, 174, 0, 0.904);
+            width: auto;
+            border: 1px solid;
+            
+        }
+        .contenido8{
+            padding: 60px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        .medics{
+            display: flex;
+            padding: 20px 0 0 30px;
+            justify-content: center;
+            
+        }
+        .med1, .med2, .med3{
+            border: 1px solid gainsboro;
+            padding: 0 0 15px 0;
+            margin: 0 15px;
+        }
+        .contenido9{
+            padding: 80px;
+            background-color: rgb(48,49,48);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .fabout, .fservices, .fhere{
+            margin: 0 50px;
+        }
+        .fhere{
+            text-align: right;
+        }
+
+        .red-fin{
+            list-style-type: none;
+            display: flex;
+            padding-left: 50%;
+            margin: 0;
+            align-items: center;  
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="encab">
+            <div class="ellogo">
+                <img src="./logo.png"  alt="logo">
+            </div>
+            <div class="items">
+                <ul style="display: flex; gap: 0 40px;">
+                    <li class="lis-1"><strong>Home</strong></li>
+                    <li class="lis-2"><strong>About</strong></li>
+                    <li class="lis-3"><strong>Service</strong></li>
+                    <li class="lis-4"><strong>Contact</strong></li>
+                </ul>
+            </div>
+            <div class="busqueda">
+                <input style="height: 33px;" type="text" placeholder="Search...">
+                <button class="boton0" style="background-color: rgb(0,192,203);"><img class="lupa" src="./lupa.png" height="32px" alt="lupa"></button>
+            </div>
+        </div>
+    </header>
+    <div class="contenido1">
+        <div class="p1">
+            <h1 class="tl1"><strong>First I wanted to be a veterinarian</strong></h1>
+            <p class="parr1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti incidunt, eum ullam saepe expedita reprehenderit.</p>
+            <div class="botones">
+                <button class="bt">Contact Us</button>
+                <button class="bt2">Our Service</button>
+            </div>
+        </div>
+        <div class="dog1">
+            <img src="./dog.png" width="300px" alt="dog">
+        </div>
+    </div>
+
+    <div class="contenido2">
+        <div class="p2">
+            <h2 class="tl2"><strong>As a veterinarian and lover of animals.</strong></h2>
+            <p class="parr2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ratione aliquid vitae asperiores ullam quis saepe assumenda optio?</p>
+            <button class="bt3">Our Service</button>
+        </div>
+        <div style="position: relative; border: 0 solid; top: 0px; left: 0; width: 300px; height: 285px; background-color: rgba(255, 157, 0, 0.5);" class="vet-1">
+            <img class="vet-dog" src="./vet-dog.png" width="300px" alt="vet-dog">
+            <div class="colorb"></div>
+        </div>
+    </div>
+
+    <div class="contenido3">
+        <h1 style="text-align: center;"><strong>Title Here</strong></h1>
+        <p style="display: flex; border: 0px solid;justify-content: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur eligendi id nihil?</p>
+        <div  class="veterinario-1">
+            <div class="vd1">
+                <img src="./vet-dog1.png" width="200px" alt="vet-1">
+                <figcaption>
+                    <h3 class="tl3">Veterinarian</h3>
+                    <p class="p3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum dignissimos cumque aliquid quibusdam sed.</p>
+                </figcaption>
+            </div>
+            <div class="vd2">
+                <img src="./vet-dog2.png" width="200px" alt="vet-2">
+                <figcaption>
+                    <h3 class="tl4">Vaccination Care</h3>
+                    <p class="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem vitae alias pariatur repellat esse possimus?</p>
+                </figcaption>
+            </div>
+            <div class="vd3">
+                <img src="./vet-dog3.png" width="200px" alt="vet-3">
+                <figcaption>
+                    <h3 class="tl5">Dental Care</h3>
+                    <p class="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate omnis maxime optio, harum hic maiores.</p>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+    <div class="contenido4">
+        <div style="position: relative; border: 0 solid; top: 0px; left: 0; width: 300px; height: 285px; background-color: rgba(255, 157, 0, 0.5);" class="vd4">
+            <img class="vet-dog4" src="./vet-dog4.png" width="300px" alt="vet-dog4">
+        </div>
+        <div class="vd5">
+            <h2 class="tl6"><strong>As a veterinarian and lover of animals.</strong></h2>
+            <p class="p6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ratione aliquid vitae asperiores ullam quis saepe assumenda optio?</p>
+            <button class="bt4">Our Service</button>
+        </div>
+    </div>
+    <div class="contenido5">
+        <h1 style="text-align: center;"><strong>Title Here</strong></h1>
+        <p style="border: 0 solid;text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cum aperiam corporis similique blanditiis ipsam!</p>
+        <div class="dogs">
+            <div class="dog2">
+                <img src="./dog_2.png" width="200px" alt="dog_2">
+                <figcaption>
+                    <h2><s style="padding: 0 20px 0 0px;">$50</s>   $30</h2>
+                    <button class="bt5">Buy Now</button>
+                </figcaption>
+            </div>
+            <div class="dog3">
+                <img src="./dog_3.png" width="200px" alt="dog_2">
+                <h2><s style="padding: 0 20px 0 0px;">$40</s>   $25</h2>
+                <button class="bt6">Buy Now</button>
+            </div>
+            <div class="dog4">
+                <img src="./dog_4.png" width="200px" alt="dog_4">
+                <h2><s style="padding: 0 20px 0 0px;">$45</s>$20</h2>
+                <button class="bt7">Buy Now</button>
+            </div>
+        </div>
+    </div>
+    <div class="contenido6">
+        <h1 style="text-align: center;"><strong>The vetcare team</strong></h1>
+        <p style="border: 0 solid;text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolorem quas doloremque nostrum aut?</p>
+        <div class="nurses">
+            <div class="ns1">
+                <img src="./nurse.png" width="200px" alt="nurse">
+                <figcaption>
+                    <h3><strong>Jennifer Mullen</strong></h3>
+                    <p style="font-size: 15px;">VETERINARY</p>
+                    <div class="list1">
+                        <ul class="redes1">
+                            <li style="border: 0px solid;padding: 0 5px 0 0px;">
+                                <img src="./instagram.png" width="30px"  alt="instagram">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./facebook.png" width="30px" alt="facebook">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./twitter.png" width="30px" alt="twitter">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./whattapp.png" width="30px" alt="whattapp">
+                            </li>
+                        </ul>
+                    </div>
+                </figcaption>
+            </div>
+            <div class="ns2">
+                <img src="./nurse_2.png" width="200px" alt="nurse">
+                <figcaption>
+                    <h3><strong>Sheeren Collins</strong></h3>
+                    <p style="font-size: 15px;">ADMINISTRATION</p>
+                    <div class="list2">
+                        <ul class="redes2">
+                            <li style="border: 0px solid;padding: 0 5px 0 0px;">
+                                <img src="./instagram.png" width="30px"  alt="instagram">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./facebook.png" width="30px" alt="facebook">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./twitter.png" width="30px" alt="twitter">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./whattapp.png" width="30px" alt="whattapp">
+                            </li>
+                        </ul>
+                    </div>
+                </figcaption>
+
+            </div>
+            <div class="ns3">
+                <img src="./nurse_3.png" width="200px" alt="nurse">
+                <figcaption>
+                    <h3><strong>Anya Johnson</strong></h3>
+                    <p style="font-size: 15px;">DOCTOR</p>
+                    <div class="list3">
+                        <ul class="redes3">
+                            <li style="border: 0px solid;padding: 0 5px 0 0px;">
+                                <img src="./instagram.png" width="30px"  alt="instagram">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./facebook.png" width="30px" alt="facebook">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./twitter.png" width="30px" alt="twitter">
+                            </li>
+                            <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                                <img src="./whattapp.png" width="30px" alt="whattapp">
+                            </li>
+                        </ul>
+                    </div>
+                </figcaption>
+
+            </div>
+        </div>
+    </div>
+    <div class="contenido7">
+        <div class="vet-5">
+            <img src="./vet-dog5.png" height="495px" width="100%" alt="vet-dog5">
+        </div>
+        <div class="elements">
+            <div style="border: 0 solid;text-align: center;padding: 50px 80px 0 80px;">
+                <img style="border: 0 solid;" src="./heart.png" width="100px" height="100px"  alt="heart">
+                <figcaption>
+                    <p><strong>+34793</strong></p>
+                    <h3 style="border: 0 solid;width: 200px;"><strong>Happy Clients</strong></h3>
+                </figcaption>
+            </div>
+            <div style="border: 0 solid;text-align: center;padding: 50px 120px 0 120px;">
+                <img style="border: 0 solid;"  src="./audif.png" width="100px" height="100px" alt="audif">
+                <figcaption>
+                    <p><strong>+45382</strong></p>
+                    <h3><strong>Deparment</strong></h3>
+                </figcaption>
+            </div>
+            <div style="border: 0 solid; text-align: center;padding: 50px 120px 0 120px;">
+                <img style="border: 0 solid;"  src="./jeringa.png" width="100px" height="100px" alt="jeringa">
+                <figcaption>
+                    <p><strong>+54762</strong></p>
+                    <h3><strong>Vaccinations</strong></h3>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+    <div class="contenido8">
+        <h1 style="color: rgb(44,46,66);">Recent Post</h1>
+        <p style="color: rgb(44,46,66);">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, aspernatur esse explicabo adipisci veniam earum?</p>
+        <div class="medics">
+            <div class="med1">
+                <img src="./medic1.png" width="200px" alt="medic1">
+                <figcaption style="text-align: left; width: 200px;">
+                    <h3 style="color: rgb(44,46,66);"><strong>As a veterinarian and lover of animals</strong></h3>
+                    <p style="color: rgb(0,192,203); font-size: 12px;"><strong>FEBRUARY 09, 2020</strong></p>
+                    <p style="color: rgb(44,46,66); font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perspiciatis maxime illum.</p>
+                    <span style="color: rgb(0,192,203);"><strong>Read More+</strong></span>
+                </figcaption>
+            </div>
+            <div class="med2">
+                <img src="./medic2.png" width="200px" alt="medic2">
+                <figcaption style="text-align: left; width: 200px;">
+                    <h3 style="color: rgb(44,46,66);"><strong>As a veterinarian and lover of animals</strong></h3>
+                    <p style="color: rgb(0,192,203); font-size: 12px;"><strong>FEBRUARY 10, 2020</strong></p>
+                    <p style="color: rgb(44,46,66); font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perspiciatis maxime illum.</p>
+                    <span style="color: rgb(0,192,203);"><strong>Read More+</strong></span>
+                </figcaption>
+            </div>
+            <div class="med3">
+                <img src="./medic3.png" width="200px" alt="medic3">
+                <figcaption style="text-align: left; width: 200px;">
+                    <h3 style="color: rgb(44,46,66);"><strong>As a veterinarian and lover of animals</strong></h3>
+                    <p style="color: rgb(0,192,203); font-size: 12px;"><strong>FEBRUARY 11, 2020</strong></p>
+                    <p style="color: rgb(44,46,66); font-size: 15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. A perspiciatis maxime illum.</p>
+                    <span style="color: rgb(0,192,203);"><strong>Read More+</strong></span>
+                </figcaption>                
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="contenido9">
+            <div class="fabout">
+                <h2>About</h2>
+                <ul style="list-style-type: none;">
+                    <li style="padding: 5px 0;">History</li>
+                    <li style="padding: 5px 0;">Our team</li>
+                    <li style="padding: 5px 0;">Brand Guidelines</li>
+                    <li style="padding: 5px 0;">Terms & Condition</li>
+                    <li style="padding: 5px 0;">Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="fservices">
+                <h2>Services</h2>
+                <ul style="list-style-type: none;">
+                    <li style="padding: 5px 0;">How to Order</li>
+                    <li style="padding: 5px 0;">Our Product</li>
+                    <li style="padding: 5px 0;">Order Status</li>
+                    <li style="padding: 5px 0;">Promo</li>
+                    <li style="padding: 5px 0;">Payment Method</li>
+                </ul>
+            </div>
+            <div class="fhere">
+                <h2>Title Here</h2>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <div style="display: flex;">
+                    <div style="background-color: rgb(234,174,0); width: 250px; height: 40px ; border: 1px solid;"></div>
+                    <div style="border: 1px solid; display: flex;align-items: center; width: 60px;justify-content: center;background-color: rgb(0,192,203);"><img src="./w-telegram.png" width="20px" alt=""></div>
+                </div>
+                <br>
+                <div class="list-fin">
+                    <ul class="red-fin">
+                        <li style="border: 0px solid;padding: 0 5px 0 0px;">
+                            <img src="./w-instagram.png" width="30px"  alt="instagram">
+                        </li>
+                        <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                            <img src="./w-facebook.png" width="30px" alt="facebook">
+                        </li>
+                        <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                            <img src="./w-twitter.png" width="30px" alt="twitter">
+                        </li>
+                        <li style="border: 0px solid;padding: 0 5px 0 5px;">
+                            <img src="./w-whattapp.png" width="30px" alt="whattapp">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
